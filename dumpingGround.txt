@@ -1,0 +1,23 @@
+Site Address: https://blakemcd.github.io/movie-matcher-project/
+
+the movie db API stuff
+API Key: 76c62a6a26e137c4e44483ea8ddb3885
+
+Example API Request
+https://api.themoviedb.org/3/movie/550?api_key=76c62a6a26e137c4e44483ea8ddb3885
+
+API Read access token 
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NmM2MmE2YTI2ZTEzN2M0ZTQ0NDgzZWE4ZGRiMzg4NSIsInN1YiI6IjYxMThiNjRhNGEwYjE5MDA1YzE2MmViYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GDnmpbcnY3iuUNOZOlgcJIR5g5voEGrHO9l2A46-YK0
+
+
+
+Movie Database API base URL: https://api.themoviedb.org/3
+
+Trending: /trending/{media_type}/{time_window}
+media_type: movie, tv, person
+time_window: day, week
+
+Example send request: 
+https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
+
+Finalized Send Request: https://api.themoviedb.org/3/trending/all/week?api_key=76c62a6a26e137c4e44483ea8ddb3885
