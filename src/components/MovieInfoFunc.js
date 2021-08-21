@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
+//
+const posterWidth = 'w342';
+const posterBaseUrl = 'https://image.tmdb.org/t/p/';
+const posterBaseUrlAndWidth = posterBaseUrl + posterWidth;
+console.log("This is the poster base URL: " + posterBaseUrlAndWidth)
+
+        //put together poster image
+        
+        // const posterMovieUrl = this.state.movie.poster_path;
+        // const posterCompleteUrl = posterBaseUrl+posterWidth+posterMovieUrl;
+
 function MovieInfoFunc() {
 
     // TrendingMovies = () => {
@@ -32,10 +43,18 @@ function MovieInfoFunc() {
 
     const renderMovies = () => {
         
+
+
         if (trending.length !== 0) {
             console.log("TRENDING: ",trending)
             return trending.map( (mov) => {
-                return (<div>{mov.title}</div>) 
+                return (
+                <div>
+                {mov.title} 
+                    <img src={posterBaseUrlAndWidth + mov.poster_path} alt = {mov.title}/>
+                </div>
+
+                ) 
             })
         } 
         else {
