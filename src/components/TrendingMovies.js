@@ -41,6 +41,7 @@ export default function TrendingMovies() {
 
     return (
         <div>
+            <h2>Trending</h2>
             {renderMovies()}
         </div>
     )
