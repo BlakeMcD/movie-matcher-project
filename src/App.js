@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import Title from './components/Title'
 import TrendingMovies from './components/TrendingMovies'
+import Search from './components/Search'
 
 export class App extends Component {
   render() {
     return (
       <div className="topContainer">
         <Title/>
-        {/* <SearchBarClass/> */}
-        {/* <Favourites/> */}
-        {/* <MovieInfo/>
-        <MovieInfoFunc/> */}
+        <Search/>
         <TrendingMovies/>
       </div>
     )
@@ -18,4 +16,6 @@ export class App extends Component {
 }
 
 export default App
+
+
 
