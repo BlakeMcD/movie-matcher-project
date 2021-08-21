@@ -21,3 +21,10 @@ Example send request:
 https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
 
 Finalized Send Request: https://api.themoviedb.org/3/trending/all/week?api_key=76c62a6a26e137c4e44483ea8ddb3885
+
+Colour Scheme
+Dark Blue: #193370
+Greyish Blue: #3A4B70
+Lightest Blue: #7EA1F2
+True Blue: #345CF0
+Darkish Blue: #2A56BD
