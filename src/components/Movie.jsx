@@ -1,4 +1,5 @@
 import React from 'react'
+import LikeButton from './LikeButton';
 
 const posterWidth = 'w342';
 const posterBaseUrl = 'https://image.tmdb.org/t/p/';
@@ -16,6 +17,10 @@ function Movie({title, poster_path, overview, vote_average}) {
             <div className="movieOverview">
                <h3>{title}</h3> 
                <p>{overview}</p>
+            </div>
+
+            <div>
+                <LikeButton/>
             </div>
         </div>
     )
