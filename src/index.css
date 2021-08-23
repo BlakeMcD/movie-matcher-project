@@ -49,7 +49,7 @@ body {
 
 .movieOverview {
   position: absolute;
-  background-color: pink;
+  background-color: transparent;  
   bottom: 0;
   left: 0;
   right: 0;
