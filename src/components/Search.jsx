@@ -8,15 +8,6 @@ function Search() {
     const [searchMovies, setSearchMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
-    // const url = "https://api.themoviedb.org/3/search/movie?api_key=76c62a6a26e137c4e44483ea8ddb3885&language=en-US&query=hello&include_adult=false"
-
-    // useEffect( async() => {
-    //     //Fetch Data
-    //     const response = await fetch(url);
-    //     const data = await response.json();          
-    //     setSearchMovies(data.results)
-    // }, [searchQuery])     
-
     const handleInputChange = (event) => {
         setSearchQuery(event.target.value)
         console.log("HANDLEINPUTCHANGE CODE IS RUNNING")
@@ -28,14 +19,13 @@ function Search() {
         //Fetch Data 
         const baseurl = 'https://api.themoviedb.org/3/search/movie?api_key=76c62a6a26e137c4e44483ea8ddb3885&language=en-US&query=';
         const query = searchQuery;
-        // const query = "Flash"
         const adult = '&include_adult=false'
 
         console.log(searchQuery)
-        const url2 = baseurl+query+adult;
-        console.log("THIS IS URL2: "+url2)
+        const url = baseurl+query+adult;
+        console.log("THIS IS THE URL: "+url)
 
-        const response = await fetch(url2);
+        const response = await fetch(url);
         const data = await response.json();          
         setSearchMovies(data.results)
     }
