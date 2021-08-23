@@ -8,14 +8,14 @@ function Search() {
     const [searchMovies, setSearchMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
-    // const url = "https://api.themoviedb.org/3/search/movie?api_key=76c62a6a26e137c4e44483ea8ddb3885&language=en-US&query=hello&include_adult=false"
+    const url = "https://api.themoviedb.org/3/search/movie?api_key=76c62a6a26e137c4e44483ea8ddb3885&language=en-US&query=hello&include_adult=false"
 
-    // useEffect( async() => {
-    //     //Fetch Data
-    //     const response = await fetch(url);
-    //     const data = await response.json();          
-    //     setSearchMovies(data.results)
-    // }, [searchQuery])     
+    useEffect( async() => {
+        //Fetch Data
+        const response = await fetch(url);
+        const data = await response.json();          
+        setSearchMovies(data.results)
+    }, [searchQuery])     
 
     const handleInputChange = (event) => {
         setSearchQuery(event.target.value)

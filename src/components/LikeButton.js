@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function LikeButton({ setMovieLiked }) {
 
     const [buttonLiked, setButtonLiked] = useState(0)
-    const [buttonColor, setButtonColor] = useState("purple")
+    const [buttonColor, setButtonColor] = useState("blue")
 
     console.log(buttonColor)
 
@@ -34,7 +34,7 @@ function LikeButton({ setMovieLiked }) {
         }
         else {
             setButtonLiked(0);
-            setButtonColor("yellow")
+            setButtonColor("blue")
             {setMovieLiked(0)}; 
         }
         
