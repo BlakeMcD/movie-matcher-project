@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import LikeButton from './LikeButton';
 
 const posterWidth = 'w342';

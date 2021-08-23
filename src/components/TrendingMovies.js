@@ -49,11 +49,3 @@ export default function TrendingMovies() {
 
 
 
-// const renderMovies = () => {
-//         if (trending.length !== 0) {
-//             console.log("TRENDING: ",trending)
-//             return trending.map( (mov) => {
-//                 return (<div>
-//                     <Movie key={mov.id} />
-//                     </div>) 
-//             })
