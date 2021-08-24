@@ -15,10 +15,10 @@ export class App extends Component {
       <Router>
         <div className="topContainer">
           <Nav/>
-          <Switch>
-            <Route path="./" exact component={Home}/>
-            <Route path="./about" component={About}/>
-            <Route path="./contactus" component={ContactUs}/>
+          <Switch>     
+            <Route path="/about" component={About}/>
+            <Route path="/contactus" component={ContactUs}/>
+            <Route path="/" exact component={Home}/>
           </Switch>
         </div>
       </Router>
