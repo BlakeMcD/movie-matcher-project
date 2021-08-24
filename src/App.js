@@ -7,19 +7,21 @@ import Nav from './components/Navigation/Nav'
 import Home from './components/Navigation/Home'
 import About from './components/Navigation/About'
 import ContactUs from './components/Navigation/ContactUs'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 export class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="topContainer">
           <Nav/>
-          <Route path="./" exact component={Home}/>
-          <Route path="./about" component={About}/>
-          <Route path="./contactus" component={ContactUs}/>
+          <Switch>
+            <Route path="./" exact component={Home}/>
+            <Route path="./about" component={About}/>
+            <Route path="./contactus" component={ContactUs}/>
+          </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     )
   }
 }
