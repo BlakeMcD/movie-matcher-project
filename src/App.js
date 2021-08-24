@@ -3,21 +3,32 @@ import Title from './components/Title'
 import Favourites from './components/Favourites'
 import TrendingMovies from './components/TrendingMovies'
 import Search from './components/Search'
+import Nav from './components/Navigation/Nav'
+import Home from './components/Navigation/Home'
+import About from './components/Navigation/About'
+import ContactUs from './components/Navigation/ContactUs'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 export class App extends Component {
   render() {
     return (
-      <div className="topContainer">
-        <Title/>
-        <Favourites/>
-        <Search/>
-        <TrendingMovies/>
-      </div>
+      <Router>
+        <div className="topContainer">
+          <Nav/>
+          <Switch>     
+            <Route path="/about" component={About}/>
+            <Route path="/contactus" component={ContactUs}/>
+            <Route path="/" exact component={Home}/>
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }
 
 export default App
+
+
 
 
 
