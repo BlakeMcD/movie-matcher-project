@@ -27,10 +27,8 @@ export default function TrendingMovies() {
                 <div className="movieContainer">
                     <Movie 
                         key={mov.id} 
-                        title={mov.title} 
-                        poster_path={mov.poster_path} 
-                        overview={mov.overview} 
-                        vote_average={mov.vote_average}/> 
+                        movie={mov} 
+                    /> 
                 </div>) 
             })
         } 

@@ -8,11 +8,11 @@ export const FavouritesContext = React.createContext();
 
 function Home() {
 
-    const [faveMovie, setFaveMovie] = useState("Legend of the legends")
+    const [faveMovie, setFaveMovie] = useState([])
 
     return (
         <div>
-            <FavouritesContext.Provider value={faveMovie}>
+            <FavouritesContext.Provider value={{faveMovie, setFaveMovie}}>
                 <Title/>
                 <Favourites/>
                 <Search/>

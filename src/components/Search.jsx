@@ -28,20 +28,19 @@ function Search() {
         const response = await fetch(url);
         const data = await response.json();          
         setSearchMovies(data.results)
+        
     }
 
     const renderMovies = () => {
         if (searchMovies.length !== 0) {
-            console.log("IS THIS RENDERING A SECOND TIME? ",searchMovies)
+            console.log("SEARCH: ",searchMovies)
             return searchMovies.map( (mov) => {
                 return (
                 <div className="movieContainer">
                     <Movie 
                         key={mov.id} 
-                        title={mov.title} 
-                        poster_path={mov.poster_path} 
-                        overview={mov.overview} 
-                        vote_average={mov.vote_average}/> 
+                        movie={mov} 
+                    /> 
                 </div>) 
             })
         } 
@@ -56,10 +55,8 @@ function Search() {
                 <input type="text" placeholder="Search..." onChange={handleInputChange}/> 
                 <button>Search...</button>
             </form>
-            <h2>Search</h2>
-            { (searchMovies.length !== 0) ? renderMovies() : console.log("Dammit")
-            }
-
+            <h2>SEARCsdfsfgH</h2>
+            {renderMovies()}
         </div>
     )
 }
