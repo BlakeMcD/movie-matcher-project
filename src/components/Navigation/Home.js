@@ -17,10 +17,6 @@ function Home() {
                 <Favourites/>
                 <Search/>
                 <TrendingMovies/>
-                <h2>THIS IS THE HOME PAGE
-
-                Why can't I see anything??????
-                </h2>
             </FavouritesContext.Provider>
         </div>
     )

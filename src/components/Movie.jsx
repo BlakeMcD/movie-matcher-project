@@ -16,8 +16,6 @@ function Movie({title, poster_path, overview, vote_average}) {
     const favouriteMovie = useContext(FavouritesContext)
 
 
-   
-
     return (
         <div className = "movie">  
             <img className= "movieImg" src={posterBaseUrlAndWidth + poster_path} alt={title}/>

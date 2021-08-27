@@ -26,6 +26,7 @@ body {
 .movieContainer {
   display: inline-flex;
   flex-wrap: wrap;
+  /* justify-content:space-around; */
 }
 
 .movie {
@@ -97,4 +98,9 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+/* HEADINGS */
+h2 {
+  margin-left: 5%;
 }

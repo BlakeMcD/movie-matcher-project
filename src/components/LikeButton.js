@@ -7,19 +7,7 @@ function LikeButton({ setMovieLiked }) {
 
     console.log(buttonColor)
 
-    // const likeButtonClicked = (event) => {
-    //     if (liked === true) {
-    //         setLiked(false)
-    //         event.target.style.color="white";
-    //         event.target.style.backgroundColor="green";
-    //     }
-    //     else {
-    //         setLiked(true)
-    //         event.target.style.color="black";
-    //         event.target.style.backgroundColor="orange";
-    //     }
-    //     // console.log(liked)
-    // }
+
 
     const likeButtonClicked = (event) => {
         if (buttonLiked === 0)
@@ -28,9 +16,6 @@ function LikeButton({ setMovieLiked }) {
             setButtonColor("red")
             {setMovieLiked(1)};
 
-            // event.target.style.color="white";
-            // event.target.style.backgroundColor="purple";
-
         }
         else {
             setButtonLiked(0);
@@ -38,10 +23,7 @@ function LikeButton({ setMovieLiked }) {
             {setMovieLiked(0)}; 
         }
         
-        // else 
-        // {
-        //     {setLiked(0)}
-        // }
+
     }
 
 
@@ -54,8 +36,3 @@ function LikeButton({ setMovieLiked }) {
 }
 
 export default LikeButton
-
-// <button className="likeButton" style={{backgroundColor: "red"}} onClick={likeButtonClicked}  >LikeButton</button>
-
-//This Works
-{/* <button className="likeButton" onClick={() => setLiked(1)}  >LikeButton</button> */}
