@@ -103,3 +103,8 @@ body {
 h2 {
   margin-left: 5%;
 }
+
+/* LOGO */
+.logo {
+  scale: 50%;
+}
