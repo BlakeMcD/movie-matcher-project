@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+
+const iconElement = <FontAwesomeIcon icon={faHeart}/>
 
 function LikeButton({ setMovieLiked }) {
 
     const [buttonLiked, setButtonLiked] = useState(0)
-    const [buttonColor, setButtonColor] = useState("blue")
+    const [buttonColor, setButtonColor] = useState("transparent")
+    const [icon, setIcon] = useState(iconElement)
+    const [iconColor, setIconColor] = useState("red")
 
     console.log(buttonColor)
 
@@ -13,13 +20,13 @@ function LikeButton({ setMovieLiked }) {
         if (buttonLiked === 0)
         {
             setButtonLiked(1);
-            setButtonColor("red")
+            setIcon(<FontAwesomeIcon icon={faMinusCircle} style={{iconColor}}/>)
             {setMovieLiked(1)};
 
         }
         else {
             setButtonLiked(0);
-            setButtonColor("blue")
+            setIcon(<FontAwesomeIcon icon={faHeart}/>)
             {setMovieLiked(0)}; 
         }
         
@@ -30,7 +37,7 @@ function LikeButton({ setMovieLiked }) {
 
     return (
         <div>
-            <button className="likeButton" onClick={() => likeButtonClicked()}  style={{backgroundColor: buttonColor}}>LikeButton</button>
+            <button className="likeButton" onClick={() => likeButtonClicked()}  style={{backgroundColor: buttonColor}}>{icon}</button>
         </div>
     )
 }

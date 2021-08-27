@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import Title from '../Title'
 import Favourites from '../Favourites'
-import Search from '../SearchOriginal'
+import Search from '../Search'
 import TrendingMovies from '../TrendingMovies'
 
 export const FavouritesContext = React.createContext();
