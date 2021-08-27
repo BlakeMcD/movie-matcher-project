@@ -68,12 +68,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: green; /* Green */
-  outline: none;
+  scale: 250%;
   border: none;
 
 
-  color: white;
+  color: red;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
