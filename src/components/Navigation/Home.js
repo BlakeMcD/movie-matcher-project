@@ -11,7 +11,7 @@ function Home() {
     const [faveMovie, setFaveMovie] = useState([])
 
     return (
-        <div>
+        <div className="bodyContentUnderNav">
             <FavouritesContext.Provider value={{faveMovie, setFaveMovie}}>
                 <Title/>
                 <Favourites/>
