@@ -12,13 +12,20 @@ const posterBaseUrlAndWidth = posterBaseUrl + posterWidth;
 function Movie({movie}) {
     console.log("PROPS: ", movie)
     const [movieLiked, setMovieLiked] = useState(0);
-    const {setFaveMovie} = useContext(FavouritesContext)
+    const {faveMovie, setFaveMovie} = useContext(FavouritesContext)
+    const [justLiked, setJustLiked] = useState(false)
 
     useEffect( () => {
-        if (movieLiked) {
+        if (movieLiked === 1 && justLiked === false) {
+            setJustLiked(true)
             setFaveMovie(prevState => {
                 return [...prevState,movie]
             })
+        }
+        else if (movieLiked === 0 && justLiked === true) {
+            setJustLiked(false)
+            setFaveMovie(faveMovie.filter((movies) => {
+                return movies.id !== movie.id}))
         }
     },[movieLiked])
 
@@ -39,7 +46,7 @@ function Movie({movie}) {
                 </div>
 
                 <div>
-                    <LikeButton setMovieLiked={setMovieLiked} />
+                    <LikeButton setMovieLiked={setMovieLiked} movieid={movie.id}/>
                 </div>
             </div>
         </div>
@@ -51,21 +58,14 @@ function Movie({movie}) {
 export default Movie
 
 
-{/* <div className = "movie">  
-            <img className= "movieImg" src={posterBaseUrlAndWidth + movie.poster_path} alt={movie.title}/>
-            <div className="movieInfo">
-                <h3>{movie.title}</h3>
-                {/* <h2>{favouriteMovie}</h2> }
-                <p>movieLiked = {movieLiked}</p>
-                <span>{movie.vote_average}</span>
-            </div>
-
-            <div className="movieOverview">
-               <h3>{movie.title}</h3> 
-               <p>{movie.overview}</p>
-            </div>
-
-            <div>
-                <LikeButton setMovieLiked={setMovieLiked} />
-            </div>
-        </div> */}
+// useEffect( () => {
+//     if (movieLiked === 1) {
+//         setFaveMovie(prevState => {
+//             return [...prevState,movie]
+//         })
+//     }
+//     else if (movieLiked === 0) {
+//         setFaveMovie(faveMovie.filter((movies) => {
+//             return movies.id !== movie.id}))
+//     }
+// },[movieLiked])
