@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+import { FavouritesContext } from './Navigation/Home'
 
 const iconElement = <FontAwesomeIcon icon={faHeart}/>
+
+
 
 function LikeButton({ setMovieLiked }) {
 
@@ -11,6 +14,8 @@ function LikeButton({ setMovieLiked }) {
     const [buttonColor, setButtonColor] = useState("transparent")
     const [icon, setIcon] = useState(iconElement)
     const [iconColor, setIconColor] = useState("red")
+
+    // const {faveMovie, setFaveMovie} =useContext(FavouritesContext)
 
     console.log(buttonColor)
 
@@ -22,12 +27,13 @@ function LikeButton({ setMovieLiked }) {
             setButtonLiked(1);
             setIcon(<FontAwesomeIcon icon={faMinusCircle} style={{iconColor}}/>)
             {setMovieLiked(1)};
-
         }
         else {
             setButtonLiked(0);
             setIcon(<FontAwesomeIcon icon={faHeart}/>)
             {setMovieLiked(0)}; 
+            //remove favourite movie from favourites list
+            // const findMovie = () => faveMovie.find(movie => movie.id === {movieid})
         }
         
 
