@@ -99,10 +99,16 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 1rem;
   background: darkgrey;
+}
+
+.navigation h3 {
+  margin: 0;
+  padding: 0;
+  height: 118px;
 }
 
 .navLinks {
@@ -113,6 +119,8 @@ body {
   list-style: none;
 }
 
+
+
 /* HEADINGS */
 h2 {
   /* margin-left: 5%; */
@@ -121,7 +129,14 @@ h2 {
   text-align: center;
 }
 
-/* LOGO */
+/* LOGO */ */
 .logo {
-  scale: 50%;
+  margin: 0;
+  padding: 0;
+  height: 118px;
+}
+
+/* SEARCH BUTTON */
+.Search button {
+  cursor: pointer;
 }
