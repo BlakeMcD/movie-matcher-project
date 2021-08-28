@@ -3,7 +3,7 @@ import { FavouritesContext } from './Navigation/Home';
 
 import LikeButton from './LikeButton';
 
-const posterWidth = 'w342';
+const posterWidth = 'w185';
 const posterBaseUrl = 'https://image.tmdb.org/t/p/';
 const posterBaseUrlAndWidth = posterBaseUrl + posterWidth;
 
@@ -24,18 +24,17 @@ function Movie({movie}) {
 
     return (
         <div>
-            <h2> IS THIS WORKING?</h2>
+            {/* <h2> IS THIS WORKING?</h2> */}
             <div className = "movie">  
                 <img className= "movieImg" src={posterBaseUrlAndWidth + movie.poster_path} alt={movie.title}/>
                 <div className="movieInfo">
-                    <h3>{movie.title}</h3>
-                    {/* <h2>{favouriteMovie}</h2>  */}
-                    <p>movieLiked = {movieLiked}</p>
-                    <span>{movie.vote_average}</span>
+                    <h3 className="movieTitle">{movie.title}</h3>
+                    {/* <p>movieLiked = {movieLiked}</p> */}
+                    {/* <span>{movie.vote_average}</span> */}
                 </div>
 
                 <div className="movieOverview">
-                    <h3>{movie.title}</h3> 
+                    <h3>{(movie.vote_average == 0) ? "Coming Soon" : movie.vote_average}</h3> 
                     <p>{movie.overview}</p>
                 </div>
 

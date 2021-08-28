@@ -55,7 +55,7 @@ function Search() {
                 <input type="text" placeholder="Search..." onChange={handleInputChange}/> 
                 <button>Search...</button>
             </form>
-            <h2>SEARCsdfsfgH</h2>
+            <h2>SEARCH</h2>
             {renderMovies()}
         </div>
     )
