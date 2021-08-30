@@ -35,11 +35,12 @@ function Search() {
         if (searchMovies.length !== 0) {
             console.log("SEARCH: ",searchMovies)
             return searchMovies.map( (mov) => {
+                const movie = {...mov,isLiked:false}
                 return (
                 <div className="movieContainer">
                     <Movie 
                         key={mov.id} 
-                        movie={mov} 
+                        movie={movie}
                     /> 
                 </div>) 
             })

@@ -11,7 +11,7 @@ export default function TrendingMovies() {
         //Fetch Data
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data)
+        console.log(data) 
        
         setTrending(data.results)
         console.log("this is trending:" + trending)
@@ -23,11 +23,12 @@ export default function TrendingMovies() {
         if (trending.length !== 0) {
             console.log("TRENDING: ",trending)
             return trending.map( (mov) => {
+                const movie = {...mov,isLiked:false}
                 return (
                 <div className="movieContainer">
                     <Movie 
                         key={mov.id} 
-                        movie={mov} 
+                        movie={movie}
                     /> 
                 </div>) 
             })
