@@ -9,25 +9,27 @@ const posterBaseUrlAndWidth = posterBaseUrl + posterWidth;
 
 
 
-function Movie({movie}) {
-    console.log("PROPS: ", movie)
-    const [movieLiked, setMovieLiked] = useState(0);
+function Movie({movie: currentMovie}) {
+    console.log("PROPS: ", currentMovie)
+    const [movie, setMovie] = useState(currentMovie);
     const {faveMovie, setFaveMovie} = useContext(FavouritesContext)
     const [justLiked, setJustLiked] = useState(false)
 
-    useEffect( () => {
-        if (movieLiked === 1 && justLiked === false) {
-            setJustLiked(true)
-            setFaveMovie(prevState => {
-                return [...prevState,movie]
-            })
-        }
-        else if (movieLiked === 0 && justLiked === true) {
-            setJustLiked(false)
-            setFaveMovie(faveMovie.filter((movies) => {
-                return movies.id !== movie.id}))
-        }
-    },[movieLiked])
+    // useEffect( () => {
+    //     if (!movie.isLiked) {
+    //         // movie.isLiked = true;
+    //         // setJustLiked(true)
+    //         setFaveMovie(prevState => {
+    //             return [...prevState,movie]
+    //         })
+    //     }
+    //     else {
+    //         // movie.isLiked = false;
+    //         // setJustLiked(false)
+    //         setFaveMovie(faveMovie.filter((movies) => {
+    //             return movies.id !== movie.id}))
+    //     }
+    // },[movie])
 
     return (
         <div>
@@ -46,7 +48,7 @@ function Movie({movie}) {
                 </div>
 
                 <div>
-                    <LikeButton setMovieLiked={setMovieLiked} movieid={movie.id}/>
+                    <LikeButton setMovie={setMovie} movie={movie}/>
                 </div>
             </div>
         </div>
